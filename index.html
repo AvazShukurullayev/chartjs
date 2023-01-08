@@ -4,16 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      .container {
-        max-width: 600px;
-        margin: 0 auto;
-      }
-      .title {
-        text-align: center;
-        margin: 2rem 0;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Chart js</title>
   </head>
   <body>
@@ -23,89 +14,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-      const chartElement = document.getElementById("myChart");
-      //   let taxArray = [
-      let taxArray = [
-        {
-          tax: 60,
-        },
-        {
-          tax: 25,
-        },
-        {
-          tax: 8,
-        },
-        {
-          tax: 1,
-        },
-        {
-          tax: 1,
-        },
-        {
-          tax: 1,
-        },
-        {
-          tax: 1,
-        },
-        {
-          tax: 1,
-        },
-        {
-          tax: 1,
-        },
-        {
-          tax: 1,
-        },
-      ];
-      let dataArray = [];
-      let taxesArray;
-      async function myFunc() {
-        await taxArray.forEach((element) => {
-          dataArray.push(element.tax.toFixed(1));
-        });
-        return await dataArray;
-      }
-      console.log(myFunc());
-      console.log(dataArray);
-      const data = {
-        labels: [
-          "Green",
-          "DarkOrange",
-          "DarkYellow",
-          "Blue",
-          "Orange",
-          "Red",
-          "Cyan",
-          "Violet",
-          "Yellow",
-          "Purple",
-        ],
-        datasets: [
-          {
-            label: "My First Dataset",
-            data: dataArray,
-            hoverOffset: 10,
-            backgroundColor: [
-              "#578348",
-              "#CC6441",
-              "#CCC03B",
-              "#48ABE2",
-              "#F39A31",
-              "#C13030",
-              "#30C196",
-              "#904E91",
-              "#EAE336",
-              "#6D69A1",
-            ],
-          },
-        ],
-      };
-
-      new Chart(chartElement, {
-        type: "doughnut",
-        data: data,
-      });
-    </script>
+    <script src="./js/app.js"></script>
   </body>
 </html>
